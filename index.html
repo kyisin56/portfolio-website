@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO -->
+<title>Kyi Sin — Portfolio</title>
+<meta name="description" content="Kyi Sin Thant is a Data Analyst turning raw data into decisions that matter — dashboards, forecasting, and A/B testing.">
+<meta name="theme-color" content="#0B0E14">
+
+<!-- Favicon: initials "KS" as inline SVG -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236366F1'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EKS%3C/text%3E%3C/svg%3E">
+
+<!-- Fonts: Space Grotesk (display), Inter (body), JetBrains Mono (data/eyebrow labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner container">
+    <a href="#home" class="navbar__logo">Kyi<span class="navbar__logo-dot">.</span></a>
+
+    <nav class="navbar__links" id="navLinks">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <!-- CV download: change href to your real file once you add resume.pdf -->
+      <a href="resume.pdf" class="btn btn--cv" download>Download CV</a>
+    </nav>
+
+    <div class="navbar__actions">
+      <!-- Light/dark toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark mode">
+        <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="container hero__grid">
+
+      <div class="hero__text" data-reveal>
+        <p class="eyebrow">// 01 — profile.status()</p>
+        <h1 class="hero__title">Hi, I'm <span class="text-accent">Kyi Sin Thant</span></h1>
+        <p class="hero__tagline">I turn raw data into decisions that matter.</p>
+        <p class="hero__intro">
+          Data Analyst focused on building dashboards, forecasting demand, and running
+          A/B tests that turn ambiguous questions into confident, evidence-backed calls.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="resume.pdf" class="btn btn--ghost" download>Download CV</a>
+        </div>
+
+        <div class="hero__socials">
+          <a href="https://www.linkedin.com/in/kyi-sin-thant-55088221b/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.83v1.98h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.7c0-1.6-.03-3.65-2.22-3.65-2.23 0-2.57 1.74-2.57 3.54V23h-4V8.5z"/></svg>
+          </a>
+          <a href="mailto:kyisin.t116@gmail.com" aria-label="Email" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 4l8 9 8-9"/></svg>
+          </a>
+          <!-- Update with your real Tableau Public profile URL -->
+          <a href="#" target="_blank" rel="noopener" aria-label="Tableau Public" class="social-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 1h2v4.4l3.6-1.6.8 1.8-3.9 1.7v3.2h3.2l1.7-3.9 1.8.8L18.6 11H23v2h-4.4l1.6 3.6-1.8.8-1.7-3.9h-3.2v3.2l3.9 1.7-.8 1.8-3.6-1.6V23h-2v-4.4l-3.6 1.6-.8-1.8 3.9-1.7v-3.2H7.4l-1.7 3.9-1.8-.8L5.4 13H1v-2h4.4L3.8 7.4l1.8-.8 1.7 3.9h3.2V7.3L6.8 5.6l.8-1.8 3.6 1.6L11 1z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__visual" data-reveal>
+        <div class="dash-card">
+          <div class="dash-card__header">
+            <span class="dash-dot"></span><span class="dash-dot"></span><span class="dash-dot"></span>
+            <span class="dash-card__title">profile.jpg</span>
+          </div>
+          <img src="images\5fbdf8b66cd0cb3aba180c36aa4b0bf6.jpg" alt="Portrait of Kyi Sin Thant" class="dash-card__img" loading="lazy" width="800" height="800">
+          <div class="dash-card__chart">
+            <svg viewBox="0 0 300 70" class="sparkline" id="heroSparkline" preserveAspectRatio="none">
+              <polyline points="0,55 30,48 60,50 90,35 120,40 150,22 180,28 210,15 240,20 270,8 300,12" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="stat-chip stat-chip--1">
+          <span class="stat-chip__value">+18%</span>
+          <span class="stat-chip__label">forecast accuracy</span>
+        </div>
+        <div class="stat-chip stat-chip--2">
+          <span class="stat-chip__value">240k</span>
+          <span class="stat-chip__label">rows analyzed</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="eyebrow" data-reveal>// 02 — about.md</p>
+      <h2 class="section__title" data-reveal>About Me</h2>
+
+      <div class="about__grid">
+        <p class="about__bio" data-reveal>
+          I'm a data analyst based in Bangkok who likes turning messy, ambiguous datasets
+          into clear answers stakeholders can act on. I've worked across finance,
+          e-commerce, and healthcare, usually sitting at the intersection of product and
+          operations teams who need a straight answer, fast. I care most about the
+          problems where the "right" metric isn't obvious yet — forecasting demand,
+          designing experiments, or building the dashboard someone will actually open
+          every morning.
+        </p>
+
+        <div class="quick-facts" data-reveal>
+          <div class="quick-fact">
+            <span class="quick-fact__label">Location</span>
+            <span class="quick-fact__value">Bangkok, Thailand</span>
+          </div>
+          <div class="quick-fact">
+            <span class="quick-fact__label">Currently</span>
+            <span class="quick-fact__value">Open to new roles</span>
+          </div>
+          <div class="quick-fact">
+            <span class="quick-fact__label">Experience</span>
+            <span class="quick-fact__value">3+ years</span>
+          </div>
+          <div class="quick-fact">
+            <span class="quick-fact__label">Industries</span>
+            <span class="quick-fact__value">Finance, E-commerce, Healthcare</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <p class="eyebrow" data-reveal>// 03 — skills.json</p>
+      <h2 class="section__title" data-reveal>Skills</h2>
+
+      <div class="skills__grid">
+        <div class="skill-group" data-reveal>
+          <h3 class="skill-group__title">Languages &amp; Querying</h3>
+          <div class="tag-list">
+            <span class="tag">SQL</span><span class="tag">Python</span><span class="tag">R</span>
+          </div>
+        </div>
+
+        <div class="skill-group" data-reveal>
+          <h3 class="skill-group__title">Visualization / BI</h3>
+          <div class="tag-list">
+            <span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Looker</span>
+          </div>
+        </div>
+
+        <div class="skill-group" data-reveal>
+          <h3 class="skill-group__title">Data &amp; Stats</h3>
+          <div class="tag-list">
+            <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Excel</span><span class="tag">Statistics</span><span class="tag">A/B Testing</span>
+          </div>
+        </div>
+
+        <div class="skill-group" data-reveal>
+          <h3 class="skill-group__title">Cloud / Warehousing</h3>
+          <div class="tag-list">
+            <span class="tag">BigQuery</span><span class="tag">Snowflake</span><span class="tag">AWS Redshift</span>
+          </div>
+        </div>
+
+        <div class="skill-group" data-reveal>
+          <h3 class="skill-group__title">Machine Learning</h3>
+          <div class="tag-list">
+            <span class="tag">scikit-learn</span><span class="tag">TensorFlow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="eyebrow" data-reveal>// 04 — projects/</p>
+      <h2 class="section__title" data-reveal>Projects &amp; Case Studies</h2>
+
+      <div class="projects__grid">
+
+        <article class="project-card" data-reveal>
+          <div class="project-card__thumb project-card__thumb--1" aria-hidden="true"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Retail Sales Forecasting Dashboard</h3>
+            <p class="project-card__problem">Regional managers had no reliable view of next-month demand, leading to over- and under-stocking.</p>
+            <p class="project-card__what">Built a Python forecasting pipeline (Prophet + XGBoost) feeding a Power BI dashboard refreshed nightly — improved forecast accuracy by 18%.</p>
+            <div class="tag-list tag-list--small">
+              <span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">Forecasting</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" target="_blank" rel="noopener">View Dashboard →</a>
+              <a href="#" target="_blank" rel="noopener">Code / Notebook →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal>
+          <div class="project-card__thumb project-card__thumb--2" aria-hidden="true"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Checkout Funnel A/B Test</h3>
+            <p class="project-card__problem">Cart abandonment was climbing and the team disagreed on which checkout redesign would help.</p>
+            <p class="project-card__what">Designed and ran a two-variant experiment with a proper power analysis; the winning variant lifted checkout completion by 7.4%.</p>
+            <div class="tag-list tag-list--small">
+              <span class="tag">SQL</span><span class="tag">A/B Testing</span><span class="tag">Statistics</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" target="_blank" rel="noopener">View Dashboard →</a>
+              <a href="#" target="_blank" rel="noopener">Code / Notebook →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal>
+          <div class="project-card__thumb project-card__thumb--3" aria-hidden="true"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Patient No-Show Risk Model</h3>
+            <p class="project-card__problem">A clinic network was losing appointment slots to unpredictable no-shows.</p>
+            <p class="project-card__what">Trained a scikit-learn classifier on scheduling history and built a Tableau early-warning dashboard for front-desk staff — cut no-shows by 12%.</p>
+            <div class="tag-list tag-list--small">
+              <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Tableau</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" target="_blank" rel="noopener">View Dashboard →</a>
+              <a href="#" target="_blank" rel="noopener">Code / Notebook →</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal>
+          <div class="project-card__thumb project-card__thumb--4" aria-hidden="true"></div>
+          <div class="project-card__body">
+            <h3 class="project-card__title">Customer Segmentation &amp; LTV Model</h3>
+            <p class="project-card__problem">Marketing was spending equally across all customers with no sense of who was actually worth retaining.</p>
+            <p class="project-card__what">Built an RFM-based segmentation in BigQuery and an LTV model that redirected retention spend toward the top 20% of customers.</p>
+            <div class="tag-list tag-list--small">
+              <span class="tag">SQL</span><span class="tag">BigQuery</span><span class="tag">Looker</span>
+            </div>
+            <div class="project-card__links">
+              <a href="#" target="_blank" rel="noopener">View Dashboard →</a>
+              <a href="#" target="_blank" rel="noopener">Code / Notebook →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE / EDUCATION ============ -->
+  <section class="section section--alt" id="experience">
+    <div class="container">
+      <p class="eyebrow" data-reveal>// 05 — experience.log</p>
+      <h2 class="section__title" data-reveal>Experience &amp; Education</h2>
+
+      <div class="timeline">
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__date">2024 — Present</div>
+          <div class="timeline__content">
+            <h3>Data Analyst — Example Retail Co.</h3>
+            <p>Built the forecasting and reporting stack used by 6 regional managers; reduced stock-out incidents by 15% through better demand forecasts.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__date">2022 — 2024</div>
+          <div class="timeline__content">
+            <h3>Junior Data Analyst — Example Health Group</h3>
+            <p>Owned weekly operations reporting and partnered with clinic staff to design the no-show risk model now used across 4 locations.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__date">2022</div>
+          <div class="timeline__content">
+            <h3>B.Sc. in Data Science — Example University</h3>
+            <p>Coursework focused on applied statistics, machine learning, and database systems.</p>
+          </div>
+        </div>
+
+        <div class="timeline__item" data-reveal>
+          <div class="timeline__date">Certification</div>
+          <div class="timeline__content">
+            <h3>Google Data Analytics Certificate</h3>
+            <p>Completed the full professional certificate track covering SQL, R, and data visualization.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <p class="eyebrow" data-reveal>// 06 — contact.send()</p>
+      <h2 class="section__title" data-reveal>Let's talk data</h2>
+
+      <div class="contact__grid">
+        <form class="contact-form" id="contactForm" data-reveal>
+          <!-- No backend attached: this composes an email to kyisin.t116@gmail.com via mailto -->
+          <label class="field">
+            <span>Name</span>
+            <input type="text" name="name" required placeholder="Kyi Sin">
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" required placeholder="kyisin.t116@gmail.com">
+          </label>
+          <label class="field">
+            <span>Message</span>
+            <textarea name="message" rows="5" required placeholder="hi"></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary">Send Message</button>
+        </form>
+
+        <div class="contact__side" data-reveal>
+          <a href="mailto:kyisin.t116@gmail.com" class="contact__email">kyisin.t116@gmail.com</a>
+          <div class="hero__socials">
+            <a href="https://www.linkedin.com/in/kyi-sin-thant-55088221b/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zM8.5 8.5h3.83v1.98h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.7c0-1.6-.03-3.65-2.22-3.65-2.23 0-2.57 1.74-2.57 3.54V23h-4V8.5z"/></svg>
+            </a>
+            <a href="mailto:kyisin.t116@gmail.com" aria-label="Email" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M4 4l8 9 8-9"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener" aria-label="Tableau Public" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11 1h2v4.4l3.6-1.6.8 1.8-3.9 1.7v3.2h3.2l1.7-3.9 1.8.8L18.6 11H23v2h-4.4l1.6 3.6-1.8.8-1.7-3.9h-3.2v3.2l3.9 1.7-.8 1.8-3.6-1.6V23h-2v-4.4l-3.6 1.6-.8-1.8 3.9-1.7v-3.2H7.4l-1.7 3.9-1.8-.8L5.4 13H1v-2h4.4L3.8 7.4l1.8-.8 1.7 3.9h3.2V7.3L6.8 5.6l.8-1.8 3.6 1.6L11 1z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p>© 2026 Kyi Sin. All rights reserved.</p>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑ Back to top</button>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
